@@ -8,66 +8,89 @@
 <style>
 body{
     margin:0;
-    font-family: Arial, sans-serif;
-    background:#f6f2ea;
+    font-family: 'Arial';
+    background: #f5f1e8;
 }
 
 /* HEADER */
 header{
-    background:#111;
+    background: linear-gradient(135deg,#111,#2b2b2b);
     color:white;
     text-align:center;
-    padding:25px;
+    padding:30px 15px;
 }
 
-header h1{
-    margin:0;
+.logo{
+    width:65px;
+    border-radius:50%;
+    margin-bottom:10px;
 }
 
 /* CONTAINER */
 .container{
-    max-width:850px;
+    max-width:900px;
     margin:auto;
     padding:15px;
 }
 
-/* CATEGORY */
+/* TITLE */
 h2{
     border-left:5px solid #c9a227;
     padding-left:10px;
-    margin-top:25px;
+    margin-top:30px;
+    color:#333;
 }
 
-/* ITEM */
+/* CARD */
 .item{
     background:white;
-    margin:10px 0;
+    margin:12px 0;
     padding:12px;
-    border-radius:10px;
+    border-radius:14px;
     display:flex;
+    align-items:center;
     justify-content:space-between;
-    box-shadow:0 2px 8px rgba(0,0,0,0.08);
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+    transition:0.2s;
+}
+
+.item:hover{
+    transform:scale(1.01);
+}
+
+.left{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.item img{
+    width:60px;
+    height:60px;
+    border-radius:12px;
+    object-fit:cover;
 }
 
 .price{
-    color:#c9a227;
     font-weight:bold;
+    color:#c9a227;
 }
 
 /* BUTTONS */
 .buttons{
     display:flex;
     gap:10px;
-    margin-top:20px;
+    margin-top:25px;
 }
 
 .btn{
     flex:1;
-    padding:12px;
+    padding:14px;
     text-align:center;
-    text-decoration:none;
     color:white;
-    border-radius:10px;
+    text-decoration:none;
+    border-radius:12px;
+    font-weight:bold;
 }
 
 .call{background:#28a745;}
@@ -75,10 +98,9 @@ h2{
 
 footer{
     text-align:center;
-    padding:15px;
-    color:#777;
+    padding:20px;
     font-size:12px;
-    margin-top:20px;
+    color:#777;
 }
 </style>
 
@@ -87,25 +109,68 @@ footer{
 <body>
 
 <header>
+    <img class="logo" src="https://cdn-icons-png.flaticon.com/512/2972/2972185.png">
     <h1>🏰 Le Château Gourmand</h1>
-    <p>Cuisine Française</p>
+    <p>Cuisine Française Premium</p>
 </header>
 
 <div class="container">
 
 <h2>🥗 Entrées</h2>
-<div class="item"><span>Salade César</span><span class="price">8.90€</span></div>
-<div class="item"><span>Soupe du Jour</span><span class="price">6.90€</span></div>
+
+<div class="item">
+    <div class="left">
+        <img src="https://images.unsplash.com/photo-1550304943-4f24f54ddde9">
+        <span>Salade César</span>
+    </div>
+    <span class="price">8.90€</span>
+</div>
+
+<div class="item">
+    <div class="left">
+        <img src="https://images.unsplash.com/photo-1604908177522-0408b6d3b7b0">
+        <span>Soupe du Jour</span>
+    </div>
+    <span class="price">6.90€</span>
+</div>
 
 <h2>🍖 Plats</h2>
-<div class="item"><span>Burger Maison</span><span class="price">15.90€</span></div>
-<div class="item"><span>Steak Frites</span><span class="price">18.90€</span></div>
+
+<div class="item">
+    <div class="left">
+        <img src="https://images.unsplash.com/photo-1550547660-d9450f859349">
+        <span>Burger Maison</span>
+    </div>
+    <span class="price">15.90€</span>
+</div>
+
+<div class="item">
+    <div class="left">
+        <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092">
+        <span>Steak Frites</span>
+    </div>
+    <span class="price">18.90€</span>
+</div>
 
 <h2>🍰 Desserts</h2>
-<div class="item"><span>Tiramisu</span><span class="price">6.50€</span></div>
+
+<div class="item">
+    <div class="left">
+        <img src="https://images.unsplash.com/photo-1511344506912-6c4e6a0f8d4b">
+        <span>Tiramisu</span>
+    </div>
+    <span class="price">6.50€</span>
+</div>
 
 <h2>🥤 Boissons</h2>
-<div class="item"><span>Coca-Cola</span><span class="price">3.50€</span></div>
+
+<div class="item">
+    <div class="left">
+        <img src="https://images.unsplash.com/photo-1581006852262-e4307cf6283a">
+        <span>Coca-Cola</span>
+    </div>
+    <span class="price">3.50€</span>
+</div>
 
 <div class="buttons">
     <a class="btn call" href="tel:+33000000000">📞 Appeler</a>
@@ -115,7 +180,7 @@ footer{
 </div>
 
 <footer>
-QR Menu Demo • Loches
+QR Menu • Premium Restaurant System
 </footer>
 
 </body>
