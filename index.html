@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -7,42 +8,81 @@
 
 <style>
 body{
-    font-family: Arial, sans-serif;
-    background:#f8f5ef;
     margin:0;
-    padding:0;
+    font-family: Arial, sans-serif;
+    background:#f4f1ea;
 }
 
 header{
-    background:#222;
+    background:linear-gradient(90deg,#1a1a1a,#3a3a3a);
     color:white;
     text-align:center;
-    padding:30px;
+    padding:25px;
 }
 
-section{
-    max-width:800px;
+header h1{
+    margin:0;
+    font-size:28px;
+}
+
+.container{
+    max-width:900px;
     margin:auto;
-    padding:20px;
+    padding:15px;
 }
 
-h2{
-    border-bottom:2px solid #d4af37;
-    padding-bottom:5px;
+.section-title{
+    margin-top:25px;
+    font-size:20px;
+    border-left:5px solid #c9a227;
+    padding-left:10px;
 }
 
-.item{
+.card{
+    background:white;
+    padding:12px;
+    margin:10px 0;
+    border-radius:12px;
     display:flex;
     justify-content:space-between;
-    margin:10px 0;
+    box-shadow:0 2px 8px rgba(0,0,0,0.08);
+}
+
+.price{
+    font-weight:bold;
+    color:#c9a227;
+}
+
+.buttons{
+    display:flex;
+    gap:10px;
+    margin-top:20px;
+}
+
+.btn{
+    flex:1;
+    padding:12px;
+    text-align:center;
+    border-radius:10px;
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.call{
+    background:#28a745;
+}
+
+.map{
+    background:#007bff;
 }
 
 footer{
-    background:#222;
-    color:white;
     text-align:center;
-    padding:20px;
+    padding:15px;
     margin-top:30px;
+    font-size:12px;
+    color:#666;
 }
 </style>
 </head>
@@ -54,71 +94,55 @@ footer{
     <p>Cuisine Française & Grill</p>
 </header>
 
-<section>
+<div class="container">
 
-<h2>🥗 Entrées</h2>
+    <div class="section-title">🥗 Entrées</div>
 
-<div class="item">
-<span>Salade César</span>
-<span>8.90€</span>
+    <div class="card">
+        <span>Salade César</span>
+        <span class="price">8.90€</span>
+    </div>
+
+    <div class="card">
+        <span>Soupe du Jour</span>
+        <span class="price">6.90€</span>
+    </div>
+
+    <div class="section-title">🍖 Plats</div>
+
+    <div class="card">
+        <span>Burger du Château</span>
+        <span class="price">15.90€</span>
+    </div>
+
+    <div class="card">
+        <span>Steak Frites</span>
+        <span class="price">18.90€</span>
+    </div>
+
+    <div class="section-title">🍰 Desserts</div>
+
+    <div class="card">
+        <span>Tiramisu Maison</span>
+        <span class="price">6.50€</span>
+    </div>
+
+    <div class="section-title">🥤 Boissons</div>
+
+    <div class="card">
+        <span>Coca-Cola</span>
+        <span class="price">3.50€</span>
+    </div>
+
+    <div class="buttons">
+        <a class="btn call" href="tel:+33000000000">📞 Appeler</a>
+        <a class="btn map" href="https://maps.google.com" target="_blank">📍 Google Maps</a>
+    </div>
+
 </div>
-
-<div class="item">
-<span>Salade de Chèvre Chaud</span>
-<span>9.50€</span>
-</div>
-
-<div class="item">
-<span>Soupe du Jour</span>
-<span>6.90€</span>
-</div>
-
-<h2>🍖 Plats</h2>
-
-<div class="item">
-<span>Burger du Château</span>
-<span>15.90€</span>
-</div>
-
-<div class="item">
-<span>Steak Frites Maison</span>
-<span>18.90€</span>
-</div>
-
-<div class="item">
-<span>Saumon Grillé</span>
-<span>19.90€</span>
-</div>
-
-<h2>🍰 Desserts</h2>
-
-<div class="item">
-<span>Tiramisu Maison</span>
-<span>6.50€</span>
-</div>
-
-<div class="item">
-<span>Crème Brûlée</span>
-<span>6.90€</span>
-</div>
-
-<h2>🥤 Boissons</h2>
-
-<div class="item">
-<span>Coca-Cola</span>
-<span>13.50€</span>
-</div>
-
-<div class="item">
-<span>Eau Minérale</span>
-<span>2.50€</span>
-</div>
-
-</section>
 
 <footer>
-📍 15 Rue du Château, Loches<br>
-📞 02 47 00 00 00
+QR Menu Demo • Powered by you 😎
 </footer>
 
 </body>
