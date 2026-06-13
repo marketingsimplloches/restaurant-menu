@@ -8,22 +8,30 @@
 <style>
 body{
     margin:0;
-    font-family: 'Arial';
-    background: #f5f1e8;
+    font-family: Arial, sans-serif;
+    background:#f4f1ea;
 }
 
 /* HEADER */
 header{
-    background: linear-gradient(135deg,#111,#2b2b2b);
+    background:linear-gradient(135deg,#111,#2b2b2b);
     color:white;
     text-align:center;
-    padding:30px 15px;
+    padding:25px;
 }
 
 .logo{
-    width:65px;
+    width:70px;
+    height:70px;
     border-radius:50%;
     margin-bottom:10px;
+    object-fit:cover;
+    border:2px solid #c9a227;
+}
+
+.location{
+    font-size:13px;
+    opacity:0.8;
 }
 
 /* CONTAINER */
@@ -33,12 +41,11 @@ header{
     padding:15px;
 }
 
-/* TITLE */
+/* SECTION TITLE */
 h2{
     border-left:5px solid #c9a227;
     padding-left:10px;
     margin-top:30px;
-    color:#333;
 }
 
 /* CARD */
@@ -50,25 +57,27 @@ h2{
     display:flex;
     align-items:center;
     justify-content:space-between;
-    box-shadow:0 4px 15px rgba(0,0,0,0.08);
-    transition:0.2s;
-}
-
-.item:hover{
-    transform:scale(1.01);
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
 }
 
 .left{
     display:flex;
     align-items:center;
-    gap:10px;
+    gap:12px;
 }
 
 .item img{
-    width:60px;
-    height:60px;
+    width:65px;
+    height:65px;
     border-radius:12px;
     object-fit:cover;
+}
+
+.text small{
+    display:block;
+    color:#777;
+    font-size:12px;
+    margin-top:3px;
 }
 
 .price{
@@ -87,8 +96,8 @@ h2{
     flex:1;
     padding:14px;
     text-align:center;
-    color:white;
     text-decoration:none;
+    color:white;
     border-radius:12px;
     font-weight:bold;
 }
@@ -111,7 +120,7 @@ footer{
 <header>
     <img class="logo" src="https://cdn-icons-png.flaticon.com/512/2972/2972185.png">
     <h1>🏰 Le Château Gourmand</h1>
-    <p>Cuisine Française Premium</p>
+    <div class="location">📍 Loches, France</div>
 </header>
 
 <div class="container">
@@ -121,17 +130,12 @@ footer{
 <div class="item">
     <div class="left">
         <img src="https://images.unsplash.com/photo-1550304943-4f24f54ddde9">
-        <span>Salade César</span>
+        <div class="text">
+            Salade César
+            <small>Salade, poulet, parmesan, sauce maison</small>
+        </div>
     </div>
-    <span class="price">8.90€</span>
-</div>
-
-<div class="item">
-    <div class="left">
-        <img src="https://images.unsplash.com/photo-1604908177522-0408b6d3b7b0">
-        <span>Soupe du Jour</span>
-    </div>
-    <span class="price">6.90€</span>
+    <div class="price">8.90€</div>
 </div>
 
 <h2>🍖 Plats</h2>
@@ -139,17 +143,12 @@ footer{
 <div class="item">
     <div class="left">
         <img src="https://images.unsplash.com/photo-1550547660-d9450f859349">
-        <span>Burger Maison</span>
+        <div class="text">
+            Burger Gourmet
+            <small>Boeuf, fromage, salade, sauce spéciale</small>
+        </div>
     </div>
-    <span class="price">15.90€</span>
-</div>
-
-<div class="item">
-    <div class="left">
-        <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092">
-        <span>Steak Frites</span>
-    </div>
-    <span class="price">18.90€</span>
+    <div class="price">15.90€</div>
 </div>
 
 <h2>🍰 Desserts</h2>
@@ -157,9 +156,12 @@ footer{
 <div class="item">
     <div class="left">
         <img src="https://images.unsplash.com/photo-1511344506912-6c4e6a0f8d4b">
-        <span>Tiramisu</span>
+        <div class="text">
+            Tiramisu Maison
+            <small>Café, mascarpone, cacao</small>
+        </div>
     </div>
-    <span class="price">6.50€</span>
+    <div class="price">6.50€</div>
 </div>
 
 <h2>🥤 Boissons</h2>
@@ -167,9 +169,12 @@ footer{
 <div class="item">
     <div class="left">
         <img src="https://images.unsplash.com/photo-1581006852262-e4307cf6283a">
-        <span>Coca-Cola</span>
+        <div class="text">
+            Coca-Cola
+            <small>33cl frais</small>
+        </div>
     </div>
-    <span class="price">3.50€</span>
+    <div class="price">3.50€</div>
 </div>
 
 <div class="buttons">
@@ -180,7 +185,7 @@ footer{
 </div>
 
 <footer>
-QR Menu • Premium Restaurant System
+QR Menu System • Premium Restaurant Demo
 </footer>
 
 </body>
