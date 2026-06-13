@@ -9,87 +9,76 @@
 body{
     margin:0;
     font-family: Arial, sans-serif;
-    background:#f7f3ed;
+    background:#f6f2ea;
 }
 
 /* HEADER */
 header{
-    background: linear-gradient(135deg,#111,#333);
+    background:#111;
     color:white;
     text-align:center;
-    padding:30px 15px;
+    padding:25px;
 }
 
 header h1{
     margin:0;
-    font-size:30px;
-}
-
-header p{
-    margin-top:8px;
-    opacity:0.8;
 }
 
 /* CONTAINER */
 .container{
-    max-width:900px;
+    max-width:850px;
     margin:auto;
     padding:15px;
 }
 
-/* SECTION TITLE */
-.section{
+/* CATEGORY */
+h2{
+    border-left:5px solid #c9a227;
+    padding-left:10px;
     margin-top:25px;
 }
 
-.section h2{
-    border-left:5px solid #c9a227;
-    padding-left:10px;
-    font-size:20px;
-}
-
-/* MENU ITEM */
+/* ITEM */
 .item{
     background:white;
-    padding:12px 15px;
     margin:10px 0;
-    border-radius:12px;
+    padding:12px;
+    border-radius:10px;
     display:flex;
     justify-content:space-between;
-    box-shadow:0 2px 10px rgba(0,0,0,0.06);
+    box-shadow:0 2px 8px rgba(0,0,0,0.08);
 }
 
 .price{
-    font-weight:bold;
     color:#c9a227;
+    font-weight:bold;
 }
 
 /* BUTTONS */
 .buttons{
     display:flex;
     gap:10px;
-    margin-top:25px;
+    margin-top:20px;
 }
 
 .btn{
     flex:1;
-    padding:14px;
+    padding:12px;
     text-align:center;
-    border-radius:12px;
-    color:white;
     text-decoration:none;
-    font-weight:bold;
+    color:white;
+    border-radius:10px;
 }
 
 .call{background:#28a745;}
 .map{background:#007bff;}
 
-/* FOOTER */
 footer{
     text-align:center;
-    padding:20px;
+    padding:15px;
+    color:#777;
     font-size:12px;
-    color:#666;
+    margin-top:20px;
 }
 </style>
 
@@ -99,47 +88,35 @@ footer{
 
 <header>
     <h1>🏰 Le Château Gourmand</h1>
-    <p>Cuisine Française & Grill</p>
+    <p>Cuisine Française</p>
 </header>
 
 <div class="container">
 
-    <div class="section">
-        <h2>🥗 Entrées</h2>
+<h2>🥗 Entrées</h2>
+<div class="item"><span>Salade César</span><span class="price">8.90€</span></div>
+<div class="item"><span>Soupe du Jour</span><span class="price">6.90€</span></div>
 
-        <div class="item"><span>Salade César</span><span class="price">8.90€</span></div>
-        <div class="item"><span>Soupe du Jour</span><span class="price">6.90€</span></div>
-    </div>
+<h2>🍖 Plats</h2>
+<div class="item"><span>Burger Maison</span><span class="price">15.90€</span></div>
+<div class="item"><span>Steak Frites</span><span class="price">18.90€</span></div>
 
-    <div class="section">
-        <h2>🍖 Plats</h2>
+<h2>🍰 Desserts</h2>
+<div class="item"><span>Tiramisu</span><span class="price">6.50€</span></div>
 
-        <div class="item"><span>Burger du Château</span><span class="price">15.90€</span></div>
-        <div class="item"><span>Steak Frites</span><span class="price">18.90€</span></div>
-    </div>
+<h2>🥤 Boissons</h2>
+<div class="item"><span>Coca-Cola</span><span class="price">3.50€</span></div>
 
-    <div class="section">
-        <h2>🍰 Desserts</h2>
-
-        <div class="item"><span>Tiramisu Maison</span><span class="price">6.50€</span></div>
-    </div>
-
-    <div class="section">
-        <h2>🥤 Boissons</h2>
-
-        <div class="item"><span>Coca-Cola</span><span class="price">3.50€</span></div>
-    </div>
-
-    <div class="buttons">
-        <a class="btn call" href="tel:+33000000000">📞 Appeler</a>
-        <a class="btn map" href="https://maps.google.com" target="_blank">📍 Google Maps</a>
-    </div>
+<div class="buttons">
+    <a class="btn call" href="tel:+33000000000">📞 Appeler</a>
+    <a class="btn map" href="https://maps.google.com" target="_blank">📍 Maps</a>
+</div>
 
 </div>
 
 <footer>
-QR Menu • Le Château Gourmand
+QR Menu Demo • Loches
 </footer>
 
 </body>
-</html><!-- rebuild -->
+</html>
