@@ -1,215 +1,74 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Restaurant QR Menu</title>
-
-<style>
-body{
-    margin:0;
-    font-family: Arial, sans-serif;
-    background:#f6f2ea;
-    color:#222;
-}
-
-/* HEADER */
-header{
-    text-align:center;
-    padding:25px 15px;
-    background:linear-gradient(135deg,#111,#2b2b2b);
-    color:white;
-}
-
-.logo{
-    width:70px;
-    height:70px;
-    border-radius:50%;
-    background:#fff;
-    display:block;
-    margin:0 auto 10px auto;
-}
-
-.restaurant-name{
-    font-size:22px;
-    font-weight:bold;
-}
-
-.tagline{
-    font-size:12px;
-    opacity:0.7;
-}
-
-/* CONTAINER */
-.container{
-    max-width:900px;
-    margin:auto;
-    padding:15px;
-}
-
-/* CATEGORY */
-h2{
-    margin-top:30px;
-    border-left:4px solid #c9a227;
-    padding-left:10px;
-}
-
-/* ITEM CARD */
-.item{
-    background:white;
-    margin:12px 0;
-    padding:12px;
-    border-radius:14px;
-    display:flex;
-    gap:12px;
-    box-shadow:0 4px 12px rgba(0,0,0,0.08);
-}
-
-.item img{
-    width:75px;
-    height:75px;
-    border-radius:12px;
-    object-fit:cover;
-}
-
-.content{
-    flex:1;
-}
-
-.title-row{
-    display:flex;
-    justify-content:space-between;
-    font-weight:bold;
-}
-
-.desc{
-    font-size:12px;
-    color:#666;
-    margin-top:4px;
-}
-
-.ingredients{
-    font-size:11px;
-    color:#888;
-    margin-top:3px;
-}
-
-.price{
-    color:#c9a227;
-    font-weight:bold;
-}
-
-/* BUTTONS */
-.buttons{
-    display:flex;
-    gap:10px;
-    margin:25px 0;
-}
-
-.btn{
-    flex:1;
-    padding:14px;
-    text-align:center;
-    color:white;
-    text-decoration:none;
-    border-radius:12px;
-    font-weight:bold;
-}
-
-.call{background:#28a745;}
-.whatsapp{background:#25D366;}
-
-/* FOOTER */
-footer{
-    text-align:center;
-    font-size:12px;
-    color:#777;
-    padding:20px;
-}
-</style>
-
-</head>
-
-<body>
-
-<header>
-    <div class="logo"></div>
-    <div class="restaurant-name">Le Château Gourmand</div>
-    <div class="tagline">Fine Dining • QR Digital Menu</div>
-</header>
-
-<div class="container">
-
-<!-- STARTERS -->
-<h2>🥗 Starter</h2>
-
-<div class="item">
-    <img src="https://images.unsplash.com/photo-1550304943-4f24f54ddde9">
-    <div class="content">
-        <div class="title-row">
-            <span>Caesar Salad</span>
-            <span class="price">8.90€</span>
+<div class="content">
+        <div class="top">
+            <span>Steak Frites</span>
+            <span class="price">18.90€</span>
         </div>
-        <div class="desc">Fresh romaine, parmesan, crispy chicken, house sauce</div>
-        <div class="ingredients">Lettuce • Chicken • Cheese • Dressing</div>
+        <div class="desc">Grilled steak with crispy fries</div>
+        <div class="ingredients">Viande • Pommes de terre</div>
     </div>
 </div>
 
-<!-- MAIN -->
-<h2>🍖 Main Course</h2>
-
 <div class="item">
-    <img src="https://images.unsplash.com/photo-1550547660-d9450f859349">
+    <img src="https://images.unsplash.com/photo-1604908177085-9f9b5a7c2f12">
     <div class="content">
-        <div class="title-row">
-            <span>Gourmet Burger</span>
-            <span class="price">15.90€</span>
+        <div class="top">
+            <span>Pasta Carbonara</span>
+            <span class="price">14.90€</span>
         </div>
-        <div class="desc">Juicy beef patty with cheese and signature sauce</div>
-        <div class="ingredients">Beef • Cheese • Salad • Sauce</div>
+        <div class="desc">Creamy Italian pasta</div>
+        <div class="ingredients">Pâtes • Crème • Bacon</div>
     </div>
 </div>
 
-<!-- DRINKS -->
 <h2>🥤 Drinks</h2>
 
 <div class="item">
-    <img src="https://images.unsplash.com/photo-1581006852262-e4307cf6283a">
+    <img src="https://unsplash.com/photos/coca-cola-can-z8PEoNIlGlg
     <div class="content">
-        <div class="title-row">
+        <div class="top">
             <span>Coca-Cola</span>
             <span class="price">3.50€</span>
         </div>
-        <div class="desc">Chilled soft drink 33cl</div>
-        <div class="ingredients">Carbonated water • Sugar • Flavor</div>
+        <div class="desc">33cl chilled drink</div>
+        <div class="ingredients">Carbonated drink</div>
     </div>
 </div>
 
-<!-- DESSERT -->
+<div class="item">
+    <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87">
+    <div class="content">
+        <div class="top">
+            <span>Fresh Orange Juice</span>
+            <span class="price">4.50€</span>
+        </div>
+        <div class="desc">Freshly squeezed oranges</div>
+        <div class="ingredients">Orange</div>
+    </div>
+</div>
+
 <h2>🍰 Dessert</h2>
 
 <div class="item">
     <img src="https://images.unsplash.com/photo-1511344506912-6c4e6a0f8d4b">
     <div class="content">
-        <div class="title-row">
+        <div class="top">
             <span>Tiramisu</span>
             <span class="price">6.50€</span>
         </div>
-        <div class="desc">Classic Italian dessert with coffee & mascarpone</div>
-        <div class="ingredients">Coffee • Cream • Cocoa • Biscuit</div>
+        <div class="desc">Classic Italian dessert</div>
+        <div class="ingredients">Coffee • Mascarpone • Cocoa</div>
     </div>
 </div>
 
-<!-- BUTTONS -->
 <div class="buttons">
-    <a class="btn call" href="tel:+33000000000">📞 Call Restaurant</a>
-    <a class="btn whatsapp" href="https://wa.me/33000000000">💬 WhatsApp Order</a>
+    <a class="btn call" href="tel:+33000000000">📞 Call</a>
+    <a class="btn whatsapp" href="https://wa.me/33000000000">💬 WhatsApp</a>
 </div>
 
 </div>
 
 <footer>
-QR Menu System • Mobile Fine Dining Experience
+QR Menu System • Premium Restaurant Experience
 </footer>
 
 </body>
