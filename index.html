@@ -1,37 +1,43 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Le Château Gourmand</title>
+<title>Restaurant QR Menu</title>
 
 <style>
 body{
     margin:0;
     font-family: Arial, sans-serif;
-    background:#f4f1ea;
+    background:#f6f2ea;
+    color:#222;
 }
 
 /* HEADER */
 header{
+    text-align:center;
+    padding:25px 15px;
     background:linear-gradient(135deg,#111,#2b2b2b);
     color:white;
-    text-align:center;
-    padding:25px;
 }
 
 .logo{
     width:70px;
     height:70px;
     border-radius:50%;
-    margin-bottom:10px;
-    object-fit:cover;
-    border:2px solid #c9a227;
+    background:#fff;
+    display:block;
+    margin:0 auto 10px auto;
 }
 
-.location{
-    font-size:13px;
-    opacity:0.8;
+.restaurant-name{
+    font-size:22px;
+    font-weight:bold;
+}
+
+.tagline{
+    font-size:12px;
+    opacity:0.7;
 }
 
 /* CONTAINER */
@@ -41,75 +47,84 @@ header{
     padding:15px;
 }
 
-/* SECTION TITLE */
+/* CATEGORY */
 h2{
-    border-left:5px solid #c9a227;
-    padding-left:10px;
     margin-top:30px;
+    border-left:4px solid #c9a227;
+    padding-left:10px;
 }
 
-/* CARD */
+/* ITEM CARD */
 .item{
     background:white;
     margin:12px 0;
     padding:12px;
     border-radius:14px;
     display:flex;
-    align-items:center;
-    justify-content:space-between;
+    gap:12px;
     box-shadow:0 4px 12px rgba(0,0,0,0.08);
 }
 
-.left{
-    display:flex;
-    align-items:center;
-    gap:12px;
-}
-
 .item img{
-    width:65px;
-    height:65px;
+    width:75px;
+    height:75px;
     border-radius:12px;
     object-fit:cover;
 }
 
-.text small{
-    display:block;
-    color:#777;
+.content{
+    flex:1;
+}
+
+.title-row{
+    display:flex;
+    justify-content:space-between;
+    font-weight:bold;
+}
+
+.desc{
     font-size:12px;
+    color:#666;
+    margin-top:4px;
+}
+
+.ingredients{
+    font-size:11px;
+    color:#888;
     margin-top:3px;
 }
 
 .price{
-    font-weight:bold;
     color:#c9a227;
+    font-weight:bold;
 }
 
 /* BUTTONS */
 .buttons{
     display:flex;
     gap:10px;
-    margin-top:25px;
+    margin:25px 0;
 }
 
 .btn{
     flex:1;
     padding:14px;
     text-align:center;
-    text-decoration:none;
     color:white;
+    text-decoration:none;
     border-radius:12px;
     font-weight:bold;
 }
 
 .call{background:#28a745;}
-.map{background:#007bff;}
+.whatsapp{background:#25D366;}
 
+/* FOOTER */
 footer{
     text-align:center;
-    padding:20px;
     font-size:12px;
     color:#777;
+    padding:20px;
 }
 </style>
 
@@ -118,74 +133,83 @@ footer{
 <body>
 
 <header>
-    <img class="logo" src="https://cdn-icons-png.flaticon.com/512/2972/2972185.png">
-    <h1>🏰 Le Château Gourmand</h1>
-    <div class="location">📍 Loches, France</div>
+    <div class="logo"></div>
+    <div class="restaurant-name">Le Château Gourmand</div>
+    <div class="tagline">Fine Dining • QR Digital Menu</div>
 </header>
 
 <div class="container">
 
-<h2>🥗 Entrées</h2>
+<!-- STARTERS -->
+<h2>🥗 Starter</h2>
 
 <div class="item">
-    <div class="left">
-        <img src="https://images.unsplash.com/photo-1550304943-4f24f54ddde9">
-        <div class="text">
-            Salade César
-            <small>Salade, poulet, parmesan, sauce maison</small>
+    <img src="https://images.unsplash.com/photo-1550304943-4f24f54ddde9">
+    <div class="content">
+        <div class="title-row">
+            <span>Caesar Salad</span>
+            <span class="price">8.90€</span>
         </div>
+        <div class="desc">Fresh romaine, parmesan, crispy chicken, house sauce</div>
+        <div class="ingredients">Lettuce • Chicken • Cheese • Dressing</div>
     </div>
-    <div class="price">8.90€</div>
 </div>
 
-<h2>🍖 Plats</h2>
+<!-- MAIN -->
+<h2>🍖 Main Course</h2>
 
 <div class="item">
-    <div class="left">
-        <img src="https://images.unsplash.com/photo-1550547660-d9450f859349">
-        <div class="text">
-            Burger Gourmet
-            <small>Boeuf, fromage, salade, sauce spéciale</small>
+    <img src="https://images.unsplash.com/photo-1550547660-d9450f859349">
+    <div class="content">
+        <div class="title-row">
+            <span>Gourmet Burger</span>
+            <span class="price">15.90€</span>
         </div>
+        <div class="desc">Juicy beef patty with cheese and signature sauce</div>
+        <div class="ingredients">Beef • Cheese • Salad • Sauce</div>
     </div>
-    <div class="price">15.90€</div>
 </div>
 
-<h2>🍰 Desserts</h2>
+<!-- DRINKS -->
+<h2>🥤 Drinks</h2>
 
 <div class="item">
-    <div class="left">
-        <img src="https://images.unsplash.com/photo-1511344506912-6c4e6a0f8d4b">
-        <div class="text">
-            Tiramisu Maison
-            <small>Café, mascarpone, cacao</small>
+    <img src="https://images.unsplash.com/photo-1581006852262-e4307cf6283a">
+    <div class="content">
+        <div class="title-row">
+            <span>Coca-Cola</span>
+            <span class="price">3.50€</span>
         </div>
+        <div class="desc">Chilled soft drink 33cl</div>
+        <div class="ingredients">Carbonated water • Sugar • Flavor</div>
     </div>
-    <div class="price">6.50€</div>
 </div>
 
-<h2>🥤 Boissons</h2>
+<!-- DESSERT -->
+<h2>🍰 Dessert</h2>
 
 <div class="item">
-    <div class="left">
-        <img src="https://images.unsplash.com/photo-1581006852262-e4307cf6283a">
-        <div class="text">
-            Coca-Cola
-            <small>33cl frais</small>
+    <img src="https://images.unsplash.com/photo-1511344506912-6c4e6a0f8d4b">
+    <div class="content">
+        <div class="title-row">
+            <span>Tiramisu</span>
+            <span class="price">6.50€</span>
         </div>
+        <div class="desc">Classic Italian dessert with coffee & mascarpone</div>
+        <div class="ingredients">Coffee • Cream • Cocoa • Biscuit</div>
     </div>
-    <div class="price">3.50€</div>
 </div>
 
+<!-- BUTTONS -->
 <div class="buttons">
-    <a class="btn call" href="tel:+33000000000">📞 Appeler</a>
-    <a class="btn map" href="https://maps.google.com" target="_blank">📍 Maps</a>
+    <a class="btn call" href="tel:+33000000000">📞 Call Restaurant</a>
+    <a class="btn whatsapp" href="https://wa.me/33000000000">💬 WhatsApp Order</a>
 </div>
 
 </div>
 
 <footer>
-QR Menu System • Premium Restaurant Demo
+QR Menu System • Mobile Fine Dining Experience
 </footer>
 
 </body>
